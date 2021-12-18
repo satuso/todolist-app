@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:wght@300&display=swap');
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  letter-spacing: 1px;
+  font-size: 1rem;
+  margin: 0;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.todo-list {
+  margin: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  width: 350px;
+  border: 1px solid lightgray;
+  box-shadow: 4px 4px lightgray;
+  font-family: 'Indie Flower', cursive;
+}
+
+.add-item {
+  outline: none;
+  margin-top: 2em;
+  font-size: 1.5rem;
+  border: none;
+}
+
+.todo-item {
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #cecece;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.check {
+  text-decoration: line-through;
+}
+
+.message {
+  margin-left: 10%;
+  color: black;
+  font-family: 'Poppins', sans-serif;
+  background-color: yellow;
+  width: 80%;
+}
+
+form {
+  margin-left: 10%;
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid lightgray;
+  padding: .5em;
+  font-family: 'Indie Flower', cursive;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+input[type="checkbox"]{
+  margin: 1em;
+  cursor: pointer;
+}
+
+input[type=checkbox]:focus {
+  outline: none;
+}
+
+button {
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  color: #333;
+  border-radius: 5px;
+  padding: .5em;
+  margin: .5em;
+  font-family: 'Poppins', sans-serif;
+}
