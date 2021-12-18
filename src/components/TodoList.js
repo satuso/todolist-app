@@ -16,11 +16,20 @@ const TodoList = ({ items, setItems, setMessage, toggle, setToggle, message }) =
     setTimeout(() => setMessage(''), 4000)
   }
 
-  const clearList = () => {
+  const removeAll = () => {
     localStorage.clear()
     setItems([])
     setMessage('removed all items')
     setTimeout(() => setMessage(''), 4000)
+  }
+
+  const removeCompleted = () => {
+    const filteredItems = items.filter(item => item.completed !== true)
+    if (filteredItems.length !== items.length){
+      setItems(filteredItems)
+      setMessage('removed completed items')
+      setTimeout(() => setMessage(''), 4000)
+    }
   }
 
   return (
@@ -53,7 +62,12 @@ const TodoList = ({ items, setItems, setMessage, toggle, setToggle, message }) =
         />
       : ''}
       <br/>
-      {items.length > 0 && <button onClick={clearList}>remove all</button>}
+      {items.length > 0 && 
+        <>
+          <button onClick={removeAll}>remove all</button>
+          <button onClick={removeCompleted}>remove completed items</button>
+        </>
+      }
       <ScrollToBottom />
     </div>
   )
