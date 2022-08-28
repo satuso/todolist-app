@@ -7,11 +7,11 @@ const App = () => {
   const [items, setItems] = useState(() => {
     const saved = localStorage.getItem('items')
     const initialValue = JSON.parse(saved)
-    return initialValue || 
+    return initialValue ||
     [
-      {text: 'study', completed: true},
-      {text: 'read a book', completed: false},
-      {text: 'exercise', completed: false}
+      { text: 'study', completed: true },
+      { text: 'read a book', completed: false },
+      { text: 'exercise', completed: false }
     ]
   }, [])
 
@@ -21,7 +21,7 @@ const App = () => {
 
   return (
     <div>
-      <TodoList 
+      <TodoList
         items={items}
         setItems={setItems}
         message={message}

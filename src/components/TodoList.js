@@ -34,10 +34,10 @@ const TodoList = ({ items, setItems, setMessage, toggle, setToggle, message }) =
 
   return (
     <div className='todo-list'>
-      <h1>To Do List</h1>
-      {items.map((item, index) => 
+      <h1>To-Do List</h1>
+      {items.map((item, index) =>
         <div key={index}>
-          <Item 
+          <Item
             setItems={setItems}
             items={items}
             item={item}
@@ -47,22 +47,22 @@ const TodoList = ({ items, setItems, setMessage, toggle, setToggle, message }) =
         </div>
       )}
       <p className='message'>{message}</p>
-      <button 
+      <button
         className='add-item'
         onClick={() => setToggle(!toggle)}>
-          <i className='far fa-edit'></i>
+        <i className='far fa-edit'></i>
       </button>
-      {toggle ? 
+      {toggle ?
         <Form
           items={items}
           setItems={setItems}
           setToggle={setToggle}
           toggle={toggle}
-          setMessage={setMessage} 
+          setMessage={setMessage}
         />
-      : ''}
+        : ''}
       <br/>
-      {items.length > 0 && 
+      {items.length > 0 &&
         <>
           <button onClick={removeAll}>remove all</button>
           <button onClick={removeCompleted}>remove completed items</button>

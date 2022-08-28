@@ -6,7 +6,7 @@ const Form = ({ items, setItems, toggle, setToggle, setMessage }) => {
   const handleChange = (e) => {
     setInput(e.target.value)
   }
-  
+
   const handleSubmit = (e) => {
     e.preventDefault()
     if (input.length > 0){
@@ -25,7 +25,7 @@ const Form = ({ items, setItems, toggle, setToggle, setMessage }) => {
         setInput('')
         setToggle(!toggle)
         setMessage('')
-      } 
+      }
     } else {
       setMessage('cannot add empty item')
       setTimeout(() => setMessage(''), 4000)
@@ -35,7 +35,7 @@ const Form = ({ items, setItems, toggle, setToggle, setMessage }) => {
   return (
     <div className='form'>
       <form onSubmit={handleSubmit}>
-        <input 
+        <input
           onChange={handleChange}
           value={input}
           placeholder='add new item'
